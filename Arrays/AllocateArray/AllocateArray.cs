@@ -19,6 +19,7 @@ namespace Test
             {
                 array[i] = 5 * i;
                 Console.WriteLine(array[i]);
+                string.Join(" ", array[i]);
             }
         }
     }
