@@ -5,8 +5,8 @@ class SortingArray
 {
     static void Main()
     {
-        Console.ReadLine();
-        int[] array = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+        //Console.ReadLine();
+        int[] array = Console.ReadLine().Split('\n').Select(int.Parse).ToArray();
 
         Array.Sort(array);
 
