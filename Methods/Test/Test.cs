@@ -1,32 +1,24 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-class FirstLargerThanNeighbours
+namespace GetLargestNumber
 {
-    static int IndexOfLargerThanNeighbours(int[] numbers)
+    class GetLargestNumber
     {
-        int index = 0;
-        for (int i = 1; i < numbers.Length - 1; i++)
+        static void Main()
         {
-            if (numbers[i] > numbers[i - 1] && numbers[i] > numbers[i + 1])
-            {
-                index = i;
-                break;
-            }
-            else
-            {
-                index = -1;
-            }
+            int[] arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            Console.WriteLine(GetMax(arr));
         }
 
-        return index;
-    }
+        static int GetMax(int[] arr)
+        {
+            int maxnumber = Math.Max(Math.Max(arr[0], arr[1]), arr[2]);
+            return maxnumber;
 
-    static void Main()
-    {
-        Console.ReadLine();
-        int[] numbers = Console.ReadLine().Split(' ').Select(n => int.Parse(n)).ToArray();
-
-        Console.WriteLine(IndexOfLargerThanNeighbours(numbers));
+        }
     }
 }
